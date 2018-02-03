@@ -1,11 +1,14 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 import App from './App'
+import { Route, Switch } from 'react-router-dom'
 
-const Root = () =>{
-	<Router>
-		<App/>
-	</Router>
-}
+const Root = () => (
+        <Router>
+            <Switch>
+                <Route path="/" component={App} />
+            </Switch>
+        </Router>
+)
 
-export default Root;
+export default Root

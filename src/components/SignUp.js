@@ -2,7 +2,18 @@ import React from 'react'
 
 const SignUp = () =>(
 <div>
-    YO
+    <label name="mail">
+    Please enter your email
+     </label>
+
+    <input>
+
+    </input>
+
+<button>
+    Register
+    </button>
+    
     </div>
 )
 
