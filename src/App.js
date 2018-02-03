@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from './1min.gif';
 import './App.css';
 import { Route, Switch, Link } from 'react-router-dom'
@@ -6,8 +6,7 @@ import SignUp from './components/SignUp';
 import Home from './components/Home';
 import RegistrationSuccess from './components/Registration/RegistrationSuccess'
 
-class App extends Component {
-  render() {
+const App = () => {
     return (
       <div className="App">
         <header className="App-header">
@@ -25,7 +24,6 @@ class App extends Component {
        </div>
       </div>
     );
-  }
 }
 
 export default App;

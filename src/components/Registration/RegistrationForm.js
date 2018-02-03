@@ -13,7 +13,7 @@ const RegistrationForm = ({email,nameOnCard, cardNumber, ccv, handleChange}) => 
 	<Paper component='form' method="POST" style={{ padding: 35 }} >
       <h2>Complete your registration</h2>
       <Grid container justify="center" spacing={8}> 
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12}>
           <TextField
             id="email"
             label="Email"
@@ -23,7 +23,7 @@ const RegistrationForm = ({email,nameOnCard, cardNumber, ccv, handleChange}) => 
             disabled
           />
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12}>
           <TextField
             id="name"
             label="Name on Card"

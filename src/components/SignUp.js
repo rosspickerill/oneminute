@@ -45,7 +45,7 @@ const au=
              <h4>Email sent! Check your email :)</h4>
            </Modal.Body>
            <Modal.Footer>
-             <Button onClick={this.handleClose}>Close</Button>
+             <Button className="signin" onClick={this.handleClose}>Close</Button>
            </Modal.Footer>
       </Modal>
         )
@@ -62,14 +62,14 @@ const au=
       <form className="form-signin">
 
          <Row className="show-grid">
-          <Col xs={12} md={12}>
+          <Col xs={12}>
             <h2 className="form-signin-heading">Please sign in</h2>
           </Col>
         </Row>
 
        <FormGroup>
          <Row className="show-grid">
-          <Col xs={6} md={6} mdPush={2}>
+          <Col  md={12} >
           <FormControl
             className="form-control"
             id="email"
@@ -85,7 +85,7 @@ const au=
             onChange={this.handleChange.bind(this, 'password')}
             placeholder="Password" /> */}
            </Col>
-          <Col xs={2} md={2} mdPush={2}>
+          <Col xs={12} >
              <Button  bsStyle="primary" block type="submit" onClick={this.handleSubmit}>Sign in</Button>
            </Col>
         </Row>

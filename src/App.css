@@ -1,17 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+background: #efefef;
+}
+
+
+h1.App-title {
+  font-size: 35px;
+  color: #fff;
+}
+p{
+  font-size: 22px
+}
+
+a:hover{
+  text-decoration: none !important;
+
+}
+
+a h1{
+background: #868686;
+padding: 10px 50px;
+color: white;
+width: fit-content;
+margin: 0 auto;
+margin-top: 25px;
+font-size: 14px;
+text-transform: capitalize;
+color: white;
+}
+
+
 .App {
   text-align: center;
 }
 
+.MuiPaper-root-1{
+  width: 500px;
+  margin: 0 auto;
+}
+
 .App-logo {
   /*animation: App-logo-spin infinite 20s linear;*/
-  height: 80px;
+  height: 200px;
 }
 
 .App-header {
-  background-color: #3a78e9;
-  height: 150px;
+  background-color: #868686;
+  height: auto;
   padding: 20px;
   color: white;
+}
+
+.view-container{
+  padding: 10px 0px 50px 0px;
 }
 
 .App-title {
@@ -21,6 +64,59 @@
 .App-intro {
   font-size: large;
 }
+
+.MuiButton-raisedPrimary-154{
+  background: #868686 !important
+}
+
+.registration{
+  padding: 50px 0px;
+    font-size: 22px
+}
+
+.registration a{
+  display: block;
+  background: #868686;
+  padding: 20px 50px;
+  color: white;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 25px;
+
+}
+
+.show-grid.row{
+width: 100%;
+margin-right: 0px;
+margin-left: 0px;
+margin-bottom: 25px;
+}
+
+button.btn-primary {
+  background: #868686;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 50px;
+  width: fit-content;
+  margin-top: 25px;
+  text-align: center;
+  border-radius: 0px;
+}
+
+.form-signin{
+  margin-top: 15px;
+}
+
+.form-group{
+  width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 50px 25px 25px 25px;
+  display: flex;
+  align-items: center;
+      box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

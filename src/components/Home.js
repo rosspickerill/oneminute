@@ -10,9 +10,9 @@ const Home = () =>{
     
         <div>
             <br/>
-     <img src="https://www.freshbooks.com/blog/wp-content/uploads/2013/07/OneMinuteFull.png"/> 
+     <img src="https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif" alt='Cat in one minute'/> 
 
-     <Link to={`/register/`}><h1>PROCEED</h1></Link> 
+     <Link to={`/register/`}><h1>Proceed</h1></Link> 
 </div>
     )
 }
