@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom'
 import Dialog from 'react-dialog'
 // import {ModalContainer, ModalDialog} from 'react-modal-dialog';
 import {Modal} from 'react-bootstrap';
+import {sendEmail} from './Auth'
 
 class SignUp extends Component {
   constructor () {
@@ -15,17 +16,21 @@ class SignUp extends Component {
   }
 
 handleChange = (name, event) => {
-    let change = {}
-    change[name] = event.target.value
-    this.setState(change)
+    this.setState({username: event.target.value})
   }
 
 handleClose = () => this.setState({isDialogOpen: false})
 
 handleSubmit = (e) => {
   e.preventDefault()
-    this.setState({isDialogOpen: true})
+const au=
+  sendEmail(this.state.username)
+    console.log(au)
+    if(au.authOK) this.setState({isDialogOpen: true})
+    
 }
+
+
 
  render () {
 

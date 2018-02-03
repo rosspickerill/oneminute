@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import logo from './1min.gif';
 import './App.css';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Link } from 'react-router-dom'
 import { HashRouter as Router } from 'react-router-dom'
 import SignUp from './components/SignUp';
+import Home from './components/Home';
 
 class App extends Component {
   render() {
@@ -14,10 +15,12 @@ class App extends Component {
           <h1 className="App-title">1minute App</h1>
         </header>
         <div className="view-container" >
-          
-        {/* <Link to={`/register/`}>ACCESS</Link> */}
 
+        <Switch>
+ 
 <Route path="/register" component={SignUp} />
+<Route path="/" component={Home} />
+</Switch>
 
        </div>
       </div>
