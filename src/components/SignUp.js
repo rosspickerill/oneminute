@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
-import {FormGroup, FormControl, Button} from 'react-bootstrap'
+import {FormGroup, FormControl, Button, Row, Col} from 'react-bootstrap'
 import { withRouter } from 'react-router-dom'
 import Dialog from 'react-dialog'
+// import {ModalContainer, ModalDialog} from 'react-modal-dialog';
+import {Modal} from 'react-bootstrap';
 
 class SignUp extends Component {
   constructor () {
@@ -18,6 +20,8 @@ handleChange = (name, event) => {
     this.setState(change)
   }
 
+handleClose = () => this.setState({isDialogOpen: false})
+
 handleSubmit = (e) => {
   e.preventDefault()
     this.setState({isDialogOpen: true})
@@ -28,27 +32,39 @@ handleSubmit = (e) => {
     if (this.state.isDialogOpen){
 
         return(
-            <Dialog
-                title="Color"   
-                onClose={this.handleClose}
-                width={600}
-                height={600}
-            >
-                <h1>CHECK YOUR EMAIL DUDE</h1>
-            </Dialog>
-
+          <Modal show={this.state.isDialogOpen} onHide={this.close}>
+           <Modal.Header closeButton>
+             <Modal.Title>Info</Modal.Title>
+           </Modal.Header>
+           <Modal.Body>
+             <h4>Email sent! Check your email :)</h4>
+           </Modal.Body>
+           <Modal.Footer>
+             <Button onClick={this.handleClose}>Close</Button>
+           </Modal.Footer>
+      </Modal>
         )
 
     }
 
     return (
 
+     
+
+
+
+
       <form className="form-signin">
-        <FormGroup>
-          <h2 className="form-signin-heading">Please sign in</h2>
-        </FormGroup>
+
+         <Row className="show-grid">
+          <Col xs={12} md={12}>
+            <h2 className="form-signin-heading">Please sign in</h2>
+          </Col>
+        </Row>
 
        <FormGroup>
+         <Row className="show-grid">
+          <Col xs={6} md={6} mdPush={2}>
           <FormControl
             className="form-control"
             id="email"
@@ -63,9 +79,15 @@ handleSubmit = (e) => {
             value={this.state.password}
             onChange={this.handleChange.bind(this, 'password')}
             placeholder="Password" /> */}
-        </FormGroup>
+           </Col>
+          <Col xs={2} md={2} mdPush={2}>
+             <Button  bsStyle="primary" block type="submit" onClick={this.handleSubmit}>Sign in</Button>
+           </Col>
+        </Row>
+     
 
-       <Button bsSize="large" bsStyle="primary" block type="submit" onClick={this.handleSubmit}>Sign in</Button>
+  </FormGroup>
+
       </form>
     )
   }
