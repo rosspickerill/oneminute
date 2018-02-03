@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './1min.gif';
 import './App.css';
+import { Route, Switch, Link } from 'react-router-dom'
+import SignUp from './components/SignUp';
+import Home from './components/Home';
+import RegistrationSuccess from './components/Registration/RegistrationSuccess'
 
 class App extends Component {
   render() {
@@ -8,11 +12,17 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">1minute App</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="view-container" >
+
+        <Switch>
+          <Route path='/registration/:id' component={RegistrationSuccess} />
+          <Route path="/register" component={SignUp} />
+          <Route path="/" component={Home} />
+        </Switch>
+
+       </div>
       </div>
     );
   }
