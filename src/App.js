@@ -14,7 +14,10 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div className="view-container" >
-          <Route path="/" component={SignUp} />
+          
+        {/* <Link to={`/register/`}>ACCESS</Link> */}
+
+<Route path="/register" component={SignUp} />
 
        </div>
       </div>
